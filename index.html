@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>En Jy - Nature Cosmetics</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>En Jy</h1>
+                <p class="tagline">Nature's Beauty</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="cart-icon">
+                <button id="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to En Jy</h2>
+            <p>Premium Natural Cosmetic Products for Your Skin</p>
+            <button class="cta-btn" onclick="document.getElementById('products').scrollIntoView({behavior: 'smooth'})">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Our Products</h2>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About En Jy</h2>
+            <p>At En Jy, we believe in the power of nature. All our products are made with natural ingredients, carefully selected to provide the best care for your skin and hair. We're committed to sustainability and ethical beauty.</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@enjy.com</p>
+            <p>Phone: +1 (555) 123-4567</p>
+            <p>Follow us on social media</p>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Shopping Cart</h2>
+            <div id="cart-items"></div>
+            <div class="cart-summary">
+                <p>Total: $<span id="cart-total">0.00</span></p>
+                <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 En Jy - Nature Cosmetics. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
